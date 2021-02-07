@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4zg-Cz-hpt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meal Table View Controller-->
+        <scene sceneID="n7l-59-K3P">
+            <objects>
+                <tableViewController id="4zg-Cz-hpt" customClass="MealTableViewController" customModule="TableViewMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xn1-TD-YVy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" id="Xnm-IC-7af" customClass="MealTableViewCell" customModule="TableViewMenu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xnm-IC-7af" id="mr5-dd-lmE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6I7-yH-tta">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="6I7-yH-tta" secondAttribute="height" multiplier="1:1" id="xwA-0J-GNF"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39X-8w-LTu">
+                                            <rect key="frame" x="98" y="11" width="296" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="pHR-ib-TsX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EMJ-G5-icJ" customClass="RatingControl" customModule="TableViewMenu" customModuleProvider="target">
+                                            <rect key="frame" x="98" y="40" width="236" height="39"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="39" id="4QC-8w-R0W"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EMJ-G5-icJ" firstAttribute="bottom" secondItem="mr5-dd-lmE" secondAttribute="bottomMargin" id="2k0-7U-suI"/>
+                                        <constraint firstItem="39X-8w-LTu" firstAttribute="trailing" secondItem="mr5-dd-lmE" secondAttribute="trailingMargin" id="52G-cK-m4S"/>
+                                        <constraint firstItem="39X-8w-LTu" firstAttribute="top" secondItem="mr5-dd-lmE" secondAttribute="topMargin" id="VTW-GC-CCv"/>
+                                        <constraint firstItem="6I7-yH-tta" firstAttribute="leading" secondItem="mr5-dd-lmE" secondAttribute="leading" id="YBj-Sk-dFJ"/>
+                                        <constraint firstItem="EMJ-G5-icJ" firstAttribute="trailing" secondItem="mr5-dd-lmE" secondAttribute="trailingMargin" constant="-60" id="cFV-fb-McS"/>
+                                        <constraint firstItem="6I7-yH-tta" firstAttribute="top" secondItem="mr5-dd-lmE" secondAttribute="top" id="ks9-u8-TeO"/>
+                                        <constraint firstAttribute="bottom" secondItem="6I7-yH-tta" secondAttribute="bottom" id="nsN-8u-EU9"/>
+                                        <constraint firstItem="EMJ-G5-icJ" firstAttribute="leading" secondItem="6I7-yH-tta" secondAttribute="trailing" constant="8" symbolic="YES" id="pTb-yL-HyC"/>
+                                        <constraint firstItem="39X-8w-LTu" firstAttribute="leading" secondItem="6I7-yH-tta" secondAttribute="trailing" constant="8" symbolic="YES" id="tWI-pR-1mS"/>
+                                        <constraint firstItem="EMJ-G5-icJ" firstAttribute="top" secondItem="39X-8w-LTu" secondAttribute="bottom" constant="8" symbolic="YES" id="yIc-E3-Cbp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="39X-8w-LTu" id="X0y-W5-r1L"/>
+                                    <outlet property="photoImageView" destination="6I7-yH-tta" id="kIl-xj-LvO"/>
+                                    <outlet property="ratingControl" destination="EMJ-G5-icJ" id="Pbx-d6-k4b"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4zg-Cz-hpt" id="dK1-Ef-l9p"/>
+                            <outlet property="delegate" destination="4zg-Cz-hpt" id="dTO-jZ-RXH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yuD-Rl-7Dx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394.20289855072468" y="94.419642857142847"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TableViewMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
